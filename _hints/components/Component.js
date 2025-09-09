@@ -1,5 +1,6 @@
-export class Component {
+export default class Component {
   #children = [];
+
   #node = null;
 
   constructor({ tag = 'div', className = '', text = '' } = {}, ...children) {
@@ -8,7 +9,7 @@ export class Component {
     node.textContent = text;
     this.#node = node;
 
-    if (children.every((e) => typeof e === HTMLElement)) {
+    if (children.every((e) => typeof e === 'object')) {
       this.appendChildren(children);
     }
   }

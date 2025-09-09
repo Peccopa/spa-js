@@ -1,4 +1,4 @@
-import { Component } from './Component.js';
+import Component from './Component';
 
 const div1 = new Component();
 const div2 = new Component();
